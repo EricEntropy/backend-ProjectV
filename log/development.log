@@ -53,3 +53,90 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 27ms (Views: 19.4ms | ActiveRecord: 0.0ms | Allocations: 1695)
 
 
+Started GET "/" for ::1 at 2021-10-20 12:59:31 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-2.6.1/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.6.1/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.1ms | Allocations: 315)
+Completed 200 OK in 13ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 2445)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-10-20 12:59:31 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/" for ::1 at 2021-10-20 18:17:17 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-2.6.1/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.6.1/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.3ms | Allocations: 315)
+Completed 200 OK in 14ms (Views: 5.5ms | ActiveRecord: 0.0ms | Allocations: 2445)
+
+
+Started GET "/fef" for ::1 at 2021-10-20 18:17:25 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/fef"):
+  
+Started GET "/users" for ::1 at 2021-10-20 18:18:22 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users" for ::1 at 2021-10-20 18:23:14 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users" for ::1 at 2021-10-20 18:23:16 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started POST "/users" for ::1 at 2021-10-20 18:26:46 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"username"=>"eric", "password"=>"[FILTERED]", "user"=>{"username"=>"eric"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 422 Unprocessable Entity in 5ms (Views: 1.4ms | ActiveRecord: 0.3ms | Allocations: 4516)
+
+
+Started POST "/users" for ::1 at 2021-10-20 18:32:53 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"username"=>"eric", "password"=>"[FILTERED]", "user"=>{"username"=>"eric"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 422 Unprocessable Entity in 3ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 898)
+
+
+Started POST "/users" for ::1 at 2021-10-20 18:44:51 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"username"=>"eric", "password"=>"[FILTERED]", "user"=>{"username"=>"eric"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 422 Unprocessable Entity in 3ms (Views: 0.5ms | ActiveRecord: 0.4ms | Allocations: 905)
+
+
+Started POST "/users" for ::1 at 2021-10-20 18:45:25 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"username"=>"eric", "password"=>"[FILTERED]", "user"=>{"username"=>"eric"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 422 Unprocessable Entity in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 442)
+
+
+Started POST "/users" for ::1 at 2021-10-20 18:48:02 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"eric", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Create (1.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "eric"], ["password_digest", "$2a$12$GoAU47BDcOdkFW9655LeXeHXIbEH5MhmMpM7V1DVBZ/Ef.Ysl3iUq"], ["created_at", "2021-10-20 22:48:02.206887"], ["updated_at", "2021-10-20 22:48:02.206887"]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (17.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (5.2ms)
+Completed 201 Created in 204ms (Views: 5.6ms | ActiveRecord: 18.8ms | Allocations: 7804)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
