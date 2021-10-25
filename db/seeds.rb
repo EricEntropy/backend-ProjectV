@@ -1,7 +1,7 @@
 
 user = User.create(
     username: "eric",
-    password: "newyork")
+    password: "password")
 
 user.posts.create(
     title: "hello",
