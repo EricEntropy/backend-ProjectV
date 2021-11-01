@@ -5,7 +5,8 @@ user1 = User.create(
 
 user1.posts.create(
     title: "hello",
-    content: "world" 
+    content: "world",
+    likes: 1
 )
 
 
@@ -15,7 +16,8 @@ user2 = User.create(
 
 user2.posts.create(
     title: "hello",
-    content: "moon" 
+    content: "moon",
+    likes: 1 
 )
 
 
@@ -25,5 +27,6 @@ user3 = User.create(
 
 user3.posts.create(
     title: "hello",
-    content: "sun" 
+    content: "sun",
+    likes: 1
 )

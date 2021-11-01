@@ -1,9 +1,8 @@
 # README
 
-git init 
-git add .
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/EricEntropy/backend-ProjectV.git
- git push
- git push --set-upstream origin main
+# Backend of Project V
+
+When you open this repo, you have to run: 
+1. rails db:migrate 
+2. rails db:seed 
+3. rails s 
